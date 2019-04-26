@@ -2,19 +2,25 @@
     <div id="home">
          <!-- banner section -->
         <div class="banner-section">
-        <div class="container" id="banner-content">
-            <div class="row">
-            <h3>Title</h3>
-            <p class="quote">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem recusandae sit officia tempore, reprehenderit praesentium explicabo minima modi ipsa, unde laborum. Expedita, tempora necessitatibus accusamus vero quasi earum explicabo optio.<br>
-                <span style="float: right;"> -&nbsp; Author</span>
-            </p>
+            <div class="container" id="banner-content">
+                <div class="row">
+                    <i class="fas fa-quote-left banner-quote-left"></i>
+
+                    <h3>Title</h3>
+                    <p class="quote-today">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem recusandae sit officia tempore, reprehenderit praesentium explicabo minima modi ipsa, unde laborum. Expedita, tempora necessitatibus accusamus vero quasi earum explicabo optio.<br>
+                        <span style="float: right;"> -&nbsp; Author</span>
+                    </p>
+
+                    <i class="fas fa-quote-right banner-quote-right"></i>
+
+                </div>
+            </div>
 
             <!-- quotes link -->
             <!-- Linking to quotes pages -->
-            <router-link to="/quotes">Quotes</router-link>
-            </div>
-        </div>
+            <router-link tag="div" to="/quotes" class="quotes-link"><a><i class="fas fa-quote-right"></i></a></router-link>
+
         </div>
 
 
@@ -27,7 +33,7 @@
 
             <div class="col-md-4">
                 <div id="profile-box">
-                <img src="" alt="profile image"/>
+                    <img id="profile-image" src="./../assets/logo.png" alt="profile image"/>
                 </div>
             </div>
 
@@ -75,21 +81,82 @@
 
 <style scoped>
     /* banner section */
-  .banner-section {
-    width: 100vw;
-    height: 400px;
-    background: darkviolet;
-    color: rgb(238, 231, 231);
+    .banner-section {
+        position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+        width: 100vw;
+        height: auto;
+        padding: 100px 0;
+        color: rgb(238, 231, 231);
+        background: rgb(137, 8, 192);
 
-  #banner-content {
-    width: 600px;
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+
+    #banner-content {
+        width: 600px;
+        position: relative;
+    }
+
+
+    .quote-today {
+        font-size: 35px;
+        line-height: 80%;
+        font-weight: 200px;
+        font-family: quotes;
+    }
+
+    .quotes-link {
+        position: absolute;
+        bottom: -30px;
+        right: 20%;
+
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: orange;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quotes-link:hover {
+        cursor: pointer;
+        background: rgb(219, 144, 4);
+    }
+
+    .quotes-link a {
+        color: #fff;
+    }
+
+    .fa-quote-right{
+        font-size: 1.4rem;
+    }
+
+    /* banner quote iconss */
+    .banner-quote-left,
+    .banner-quote-right
+    {
+        opacity: 0.95;
+        font-size: 100px;
+        color: rgb(94, 22, 124);
+        position: absolute;
+    }
+
+    .banner-quote-left {
+        left: -130px;
+        top: -50px;
+    }
+
+    .banner-quote-right {
+        right: -130px;
+        bottom: -50px;
+    }
 
    /* app body */
    #profile-box{

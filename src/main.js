@@ -6,6 +6,7 @@ import { routes } from './routes';
 // bootstrap imports
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/fonts.css';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
