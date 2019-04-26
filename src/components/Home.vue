@@ -33,7 +33,7 @@
 
             <div class="col-md-4">
                 <div id="profile-box">
-                    <img id="profile-image" src="./../assets/logo.png" alt="profile image"/>
+                    <img id="profileImage" src="./../assets/profile.png" alt="profile image"/>
                 </div>
             </div>
 
@@ -166,8 +166,12 @@
      border-radius: 50%;
 
      overflow: hidden;
-     background: grey;
      margin: auto 0 auto auto;
+   }
+
+   #profileImage {
+       height: inherit;
+       width: inherit;
    }
 
    #app-body {
