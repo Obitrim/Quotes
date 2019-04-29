@@ -44,6 +44,10 @@
 
 
 <style>
+  body {
+    background: #ebebea;
+    scroll-behavior: smooth;
+  }
 
   #app {
     font-family: roboto, roboto-condensed;
